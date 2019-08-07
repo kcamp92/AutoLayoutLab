@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,38 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LabAutoLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDB-dL-qRm">
+                                <rect key="frame" x="0.0" y="37" width="414" height="409"/>
+                                <color key="backgroundColor" red="0.60507359260000004" green="0.66637420420000004" blue="0.85668312820000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSf-zW-Kzr">
+                                <rect key="frame" x="0.0" y="453" width="414" height="409"/>
+                                <color key="backgroundColor" red="1" green="0.78378500309999999" blue="0.93545793460000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nSf-zW-Kzr" firstAttribute="height" secondItem="nDB-dL-qRm" secondAttribute="height" id="1KD-Zr-Tox"/>
+                            <constraint firstItem="nSf-zW-Kzr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4RD-Jt-gfT"/>
+                            <constraint firstAttribute="trailing" secondItem="nSf-zW-Kzr" secondAttribute="trailing" id="8Wd-oN-3lU"/>
+                            <constraint firstItem="nSf-zW-Kzr" firstAttribute="leading" secondItem="nDB-dL-qRm" secondAttribute="leading" id="Lp5-oR-wBI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="nDB-dL-qRm" secondAttribute="top" constant="7" id="ZhY-0E-fJG"/>
+                            <constraint firstItem="nSf-zW-Kzr" firstAttribute="trailing" secondItem="nDB-dL-qRm" secondAttribute="trailing" id="cCz-0w-aRf"/>
+                            <constraint firstItem="nSf-zW-Kzr" firstAttribute="top" secondItem="nDB-dL-qRm" secondAttribute="bottom" constant="7" id="dwX-OR-a35"/>
+                            <constraint firstItem="nSf-zW-Kzr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="eyR-W9-P1F"/>
+                            <constraint firstItem="nDB-dL-qRm" firstAttribute="height" secondItem="nSf-zW-Kzr" secondAttribute="height" id="j4M-7d-OTQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="120.53571428571428"/>
         </scene>
     </scenes>
 </document>
